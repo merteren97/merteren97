@@ -1,0 +1,57 @@
+name: Update Profile Telemetry & Snake
+
+on:
+  schedule:
+    # Runs daily at 04:00 UTC
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/**"
+      - ".github/workflows/update-profile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Generate Live GitHub Telemetry SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+          GITHUB_USERNAME: merteren97
+        run: node scripts/generate-stats.mjs
+
+      - name: Generate Atris-Themed Contribution Snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: merteren97
+          outputs: |
+            assets/github-snake-light.svg?palette=github-light&color_snake=5865F2&color_dots=#ebedf0,#c7d2fe,#818cf8,#5865f2,#00b4d8
+            assets/github-snake-dark.svg?palette=github-dark&color_snake=00D2FF&color_dots=#161b22,#1e2a5e,#3b4cca,#5865f2,#00d2ff
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push updated telemetry assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stats-dark.svg assets/stats-light.svg assets/github-snake-dark.svg assets/github-snake-light.svg
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(telemetry): update live profile stats and contribution snake"
+            git push
+          fi

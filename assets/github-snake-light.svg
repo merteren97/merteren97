@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="118" viewBox="0 0 900 118" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+  </defs>
+  <rect x="0.75" y="0.75" width="898.5" height="116.5" rx="14" fill="url(#bg)" stroke="#e2e8f0" stroke-width="1" />
+  <text x="450" y="52" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', Consolas, monospace" font-size="10.5" font-weight="600" letter-spacing="1.2" fill="#475569">CONTRIBUTION SNAKE · AUTOMATED VIA GITHUB ACTIONS</text>
+  <text x="450" y="75" text-anchor="middle" font-family="'Inter', -apple-system, 'Segoe UI', sans-serif" font-size="12" fill="#64748b">Will render your live animated contribution graph automatically on the first workflow run.</text>
+</svg>

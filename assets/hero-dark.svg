@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="270" viewBox="0 0 900 270" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12151e" />
+      <stop offset="100%" stop-color="#0c0f16" />
+    </linearGradient>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#00D2FF" />
+    </linearGradient>
+    <linearGradient id="top-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0" />
+      <stop offset="28%" stop-color="#6366F1" stop-opacity="0.65" />
+      <stop offset="56%" stop-color="#00D2FF" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#00D2FF" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="ambient-light" cx="28%" cy="0%" r="72%">
+      <stop offset="0%" stop-color="#5865F2" stop-opacity="0.13" />
+      <stop offset="55%" stop-color="#00D2FF" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#00D2FF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="emblem-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5865F2" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#00D2FF" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="arch-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1c2230" stroke-width="0.6" stroke-opacity="0.45" />
+    </pattern>
+    <radialGradient id="grid-fade" cx="65%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <mask id="grid-mask">
+      <rect width="900" height="270" fill="url(#grid-fade)" />
+    </mask>
+    <clipPath id="hero-clip">
+      <rect x="0.75" y="0.75" width="898.5" height="268.5" rx="16" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .orbit { transform-origin: 546px 135px; animation: spin 42s linear infinite; }
+    .pulse { animation: breathe 3s ease-in-out infinite; }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes breathe {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+
+  <g clip-path="url(#hero-clip)">
+    <rect x="0.75" y="0.75" width="898.5" height="268.5" rx="16" fill="url(#bg)" />
+    <rect x="0" y="0" width="900" height="270" fill="url(#arch-grid)" mask="url(#grid-mask)" />
+    <rect x="0" y="0" width="900" height="270" fill="url(#ambient-light)" />
+    <!-- Whisper-thin top specular accent -->
+    <rect x="0" y="0.75" width="900" height="1.5" fill="url(#top-sheen)" />
+  </g>
+
+  <rect x="0.75" y="0.75" width="898.5" height="268.5" rx="16" stroke="#232836" stroke-width="1" />
+
+  <!-- LEFT EDITORIAL COLUMN -->
+  <circle cx="42" cy="40" r="3.2" fill="#10B981" class="pulse" />
+  <text x="54" y="43.5" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#636f88">ATRISHUB · SYSTEMS &amp; AI ARCHITECTURE</text>
+
+  <text x="38" y="102" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="-1.1" fill="#f4f6fb">E. Mert Eren</text>
+
+  <text x="38" y="132" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" font-weight="600" fill="url(#brand)">Software Engineer &amp; Systems Architect</text>
+
+  <text x="38" y="164" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#94a0b8">Architecting local-first AI developer workspaces, real-time WebRTC</text>
+  <text x="38" y="185" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#94a0b8">platforms, and autonomous engineering tools in Rust, TypeScript &amp; Tauri.</text>
+
+  <!-- Subtle bottom metadata line -->
+  <line x1="38" y1="214" x2="452" y2="214" stroke="#1d2230" stroke-width="1" />
+  <text x="38" y="238" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#636f88">ISTANBUL, TR</text>
+  <text x="128" y="238" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#232836">/</text>
+  <text x="144" y="238" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#636f88">SINCE 2008</text>
+  <text x="224" y="238" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#232836">/</text>
+  <text x="240" y="238" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" fill="#94a0b8">ATRISHUB.COM</text>
+
+  <!-- CENTER-RIGHT SCULPTURAL ATRIS MEDALLION -->
+  <g>
+    <circle cx="546" cy="135" r="78" fill="url(#emblem-glow)" />
+    <circle cx="546" cy="135" r="56" stroke="#232836" stroke-width="1" stroke-dasharray="2 6" class="orbit" />
+    <circle cx="546" cy="135" r="41" fill="#161a26" stroke="#232836" stroke-width="1" />
+    <!-- Subtle geometric crosshair ticks -->
+    <line x1="546" y1="68" x2="546" y2="75" stroke="#636f88" stroke-opacity="0.45" stroke-width="1" />
+    <line x1="546" y1="195" x2="546" y2="202" stroke="#636f88" stroke-opacity="0.45" stroke-width="1" />
+    <line x1="479" y1="135" x2="486" y2="135" stroke="#636f88" stroke-opacity="0.45" stroke-width="1" />
+    <line x1="606" y1="135" x2="613" y2="135" stroke="#636f88" stroke-opacity="0.45" stroke-width="1" />
+    <svg x="525" y="116" width="42" height="39" viewBox="394 1205 736 675" preserveAspectRatio="xMidYMid meet">
+    <g transform="translate(0,1559) scale(0.1,-0.1)" fill="url(#brand)" stroke="none">
+      <path d="M8730 2659 l0 -675 -38 -57 c-21 -31 -56 -86 -77 -122 -40 -68 -48 -81 -192 -305 -49 -77 -109 -173 -132 -213 -24 -41 -84 -136 -134 -212 -51 -76 -119 -182 -152 -235 -33 -53 -90 -143 -126 -199 -37 -57 -85 -134 -108 -172 -23 -38 -70 -113 -104 -166 -34 -53 -113 -177 -176 -275 -113 -177 -193 -303 -265 -418 -21 -33 -91 -143 -155 -245 -167 -263 -337 -533 -495 -786 -28 -43 -89 -140 -137 -214 -47 -75 -96 -155 -108 -178 -12 -23 -30 -48 -41 -54 -11 -7 -20 -17 -20 -23 0 -5 -30 -57 -66 -115 -37 -58 -105 -168 -152 -245 -47 -77 -111 -178 -142 -225 -32 -47 -88 -134 -125 -195 -38 -60 -102 -160 -142 -222 -65 -99 -78 -113 -107 -119 -47 -8 -1383 -1 -1392 8 -4 4 4 25 18 45 14 21 60 94 102 163 43 69 87 139 98 155 11 17 71 113 134 215 62 102 145 235 184 295 181 282 326 511 401 635 46 74 124 198 174 275 50 77 115 181 145 230 29 50 83 135 120 190 58 88 174 273 254 405 15 25 59 95 99 156 40 60 86 131 102 158 112 177 363 572 431 678 35 54 71 112 80 130 9 18 67 110 129 203 157 239 210 328 197 333 -6 2 -48 26 -94 54 -46 28 -126 75 -178 103 -235 129 -301 166 -395 220 -155 91 -222 128 -330 184 -55 29 -101 54 -104 57 -2 2 43 26 100 53 57 27 216 103 353 170 137 66 250 121 252 121 2 0 108 51 236 114 128 62 361 175 518 251 440 212 959 464 1235 599 277 136 295 144 313 145 9 1 12 -140 12 -675z m130 -1947 c68 -116 164 -277 214 -357 49 -80 166 -273 261 -430 430 -712 683 -1129 865 -1430 108 -179 231 -381 272 -450 370 -614 472 -784 544 -905 l82 -140 -2410 -3 c-1326 -1 -2413 0 -2415 1 -5 6 450 752 516 847 10 14 26 41 36 60 9 19 63 107 120 195 109 170 451 715 518 827 l40 67 51 -33 c28 -18 92 -54 141 -81 86 -46 597 -335 735 -415 326 -189 665 -378 672 -374 10 6 -102 197 -438 751 -99 164 -270 447 -380 628 -110 182 -207 341 -216 355 -16 24 -14 28 62 145 44 66 113 176 155 245 41 69 106 173 143 231 80 127 149 238 233 377 35 56 65 102 69 102 3 0 61 -96 130 -213z" />
+    </g>
+  </svg>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="628" y1="34" x2="628" y2="236" stroke="#1d2230" stroke-width="1" />
+
+  <!-- RIGHT ARCHITECTURAL SYSTEM INDEX -->
+  <text x="652" y="44" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" letter-spacing="1.2" fill="#636f88">ACTIVE ECOSYSTEM</text>
+  <text x="848" y="44" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#636f88">04 SYSTEMS</text>
+  <line x1="652" y1="54" x2="848" y2="54" stroke="#1d2230" stroke-width="1" />
+  
+    <g>
+      <text x="652" y="88" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#636f88">01</text>
+      <circle cx="678" cy="84.5" r="2.8" fill="#6366f1" />
+      <text x="688" y="88" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#f4f6fb">AtrisAgent</text>
+      <text x="848" y="88" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#636f88">AI Orchestrator</text>
+      <line x1="652" y1="104" x2="848" y2="104" stroke="#1d2230" stroke-width="1" />
+    </g>
+    <g>
+      <text x="652" y="129" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#636f88">02</text>
+      <circle cx="678" cy="125.5" r="2.8" fill="#10b981" />
+      <text x="688" y="129" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#f4f6fb">AtrisWork</text>
+      <text x="848" y="129" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#636f88">Multi-AI IDE</text>
+      <line x1="652" y1="145" x2="848" y2="145" stroke="#1d2230" stroke-width="1" />
+    </g>
+    <g>
+      <text x="652" y="170" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#636f88">03</text>
+      <circle cx="678" cy="166.5" r="2.8" fill="#38bdf8" />
+      <text x="688" y="170" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#f4f6fb">AtrisChat</text>
+      <text x="848" y="170" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#636f88">WebRTC Suite</text>
+      <line x1="652" y1="186" x2="848" y2="186" stroke="#1d2230" stroke-width="1" />
+    </g>
+    <g>
+      <text x="652" y="211" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#636f88">04</text>
+      <circle cx="678" cy="207.5" r="2.8" fill="#a78bfa" />
+      <text x="688" y="211" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#f4f6fb">AtrisVoice</text>
+      <text x="848" y="211" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#636f88">On-Device STT</text>
+      
+    </g>
+</svg>

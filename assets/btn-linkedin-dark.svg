@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="34" viewBox="0 0 210 34" fill="none">
+  <rect x="0.75" y="0.75" width="208.5" height="32.5" rx="9" fill="#11151f" stroke="#242b3c" stroke-width="1" />
+  <g transform="translate(13, 9.5)" stroke="#38BDF8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="1.5" y="1.5" width="12" height="12" rx="2.2" /><line x1="4.8" y1="6.5" x2="4.8" y2="10.5" /><circle cx="4.8" cy="4.4" r="0.6" fill="#38BDF8" /><path d="M7.8 10.5V7.9c0-1 .7-1.6 1.5-1.6s1.4.6 1.4 1.6v2.6" />
+  </g>
+  <text x="35" y="21" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#7f8ca6">LinkedIn</text>
+  <line x1="92" y1="10" x2="92" y2="24" stroke="#1d2230" stroke-width="1" />
+  <text x="103" y="21" font-family="'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="500" fill="#e2e8f4">E. Mert Eren ↗</text>
+</svg>
